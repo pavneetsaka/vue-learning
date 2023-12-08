@@ -1,0 +1,9 @@
+{
+    "assignments": [
+        {"id": 1, "name": "Task 1", "complete": false, "tag": "science"},
+        {"id": 2, "name": "Task 2", "complete": false, "tag": "math"},
+        {"id": 3, "name": "Task 3", "complete": false, "tag": "math"},
+        {"id": 4, "name": "Task 4", "complete": false, "tag": "history"},
+        {"id": 5, "name": "Task science", "complete": true, "tag": "science"}
+    ]
+}

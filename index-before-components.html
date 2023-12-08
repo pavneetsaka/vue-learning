@@ -1,0 +1,51 @@
+<html>
+	<title>Vue Learnings</title>
+	<head>
+		<script src="https://cdn.tailwindcss.com"></script>
+		<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+	</head>
+	<body class="h-full grid place-items-center">
+		<div id="app">
+			<!--<div class="flex">
+				<input type="text" v-model="greetings" />
+				{{ greetings }}
+			</div>-->
+			<!--<div>
+				<button type="button" :class="active ? 'text-green':'text-red'" @click="toggle">Click Me!</button>
+			</div>-->
+
+
+		</div>
+
+		<script>
+			let app = {
+				data(){
+					return{
+						greetings: 'Hello World!',
+						active: true,
+						assignments: [
+							{id: 1, name: 'Task 1', complete: false},
+							{id: 2, name: 'Task 2', complete: false},
+							{id: 3, name: 'Task 3', complete: false},
+							{id: 4, name: 'Task 4', complete: false},
+						]
+					}
+				},
+				methods:{
+					toggle(){
+						return this.active = ! this.active
+					}
+				},
+				computed:{
+					inProgress(){
+						return this.assignments.filter(a => ! a.complete)
+					},
+					completed(){
+						return this.assignments.filter(a => a.complete)
+					}
+				}
+			};
+			Vue.createApp(app).mount('#app');
+		</script>
+	</body>
+</html>
